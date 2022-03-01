@@ -8,10 +8,20 @@ class Fee():
         self.exit_price = exit_price
         self.run()
         # all_cost = self.entry_fee() + self.exit_fee()
+    
         # print(all_cost)
-    def run(self):
+#i have litterally no idea how to name any var,with think i will inhance it
+    def all_calc(self):
         all_cost = self.entry_fee() + self.exit_fee()
-        return f"fee: {all_cost}"
+        return all_cost
+
+
+    def run(self):
+        no =self.all_calc()
+        # print(no)
+
+        
+        return f"fee: {no}"
  
        
     def entry_fee(self):
@@ -32,9 +42,9 @@ class Fee():
      
   
 
-a = Fee(100,102)
-b = a.run()
-print(b)
+# a = Fee(100,102)
+# b = a.run()
+# print(b)
 
 
 # entryfee =a.entry_fee()

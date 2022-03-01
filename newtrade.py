@@ -1,6 +1,6 @@
 from long import Long
 from short import Short
-from fee import Fee
+# from fee import Fee
 import pickle
 
 run_again = "yes"
