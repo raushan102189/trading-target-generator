@@ -2,21 +2,48 @@ from long import Long
 from short import Short
 # from fee import Fee
 import pickle
+numbering = 1
 
-run_again = "yes"
-while run_again == "yes":
+
+save = "no"
+while save != "yes":
+
     current_price = float(input("current price: "))
     stoploss = float (input("stoploss: "))
     maxloss = float(input("maxloss: "))
-    if  current_price > stoploss:
-        a = Long(current_price, stoploss, maxloss)
-        # b = a
-        # print(b)
-        # with open("data.txt") as data:
-        #     data.write(f"is it work")
-    elif current_price < stoploss:
-        a = Short(current_price, stoploss, maxloss)
-        # with open("data.txt") as data:
-        #     data.write(a)
+    call = current_price >stoploss
+    put = current_price < stoploss
+    if  call:
+        a = Long(current_price,stoploss,maxloss)
+        e=a.longo()
+        call_data = {numbering + 1:e}
+        
+     
+        #
+    elif put:
+        b = Short(current_price, stoploss, maxloss)
+        e = b.shorto()
+        put_data = {numbering + 1:e}
+
+ 
+        
+    save = input("want to save it\nyes or no: ")
+while save == "yes":
+    if call:
+        with open("long_data.txt","ab") as datas:
+                trb = pickle.dump(call_data, datas)
+    if put:
+        with open("short_data.txt","ab") as datas:
+                trb = pickle.dump(put_data,datas)
+    break
+        
+
+
+
+write_remarks = input("write the cause: ")
+with open("long_data.txt" ,"rb") as read_data:
+    c =pickle.load(read_data)
     
-    run_again = input("want to run again\nyes or no: ")
+print(c)
+    
+

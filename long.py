@@ -5,20 +5,20 @@ class Long():
         self.stoploss = stoploss
         self.maxloss = maxloss
 
-        b = self.longo(current,stoploss,maxloss)
+        b = self.longo()
         print(b)
 
-    def longo(self,current,stoploss,maxloss):
-        risk_on_1_share = current - stoploss
-        quantity = (maxloss / risk_on_1_share)
+    def longo(self):
+        risk_on_1_share = self.current - self.stoploss
+        quantity = (self.maxloss / risk_on_1_share)
 
     
-        entry_price = current * quantity
+        entry_price = self.current * quantity
         target = risk_on_1_share *2
-        target_price = target + current
-        target_percentage = (target_price / current)
+        target_price = target + self.current
+        target_percentage = (target_price / self.current)
         exit_price = target_percentage * entry_price
-        stoploss_hit_percentage = stoploss /current
+        stoploss_hit_percentage = self.stoploss /self.current
         stoploss_hit_price = stoploss_hit_percentage * entry_price
         fee = Fee(entry_price,exit_price)
         total_fee = fee.run()
