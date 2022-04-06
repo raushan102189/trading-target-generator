@@ -1,9 +1,12 @@
 from fee import Fee
+import pandas as pd
+from save_json import try_to_save
 class Long():
-    def __init__(self,current,stoploss,maxloss):
+    def __init__(self,current,stoploss,maxloss,reason):
         self.current = current
         self.stoploss = stoploss
         self.maxloss = maxloss
+        self.reason = reason
 
         b = self.longo()
         print(b)
@@ -23,8 +26,13 @@ class Long():
         fee = Fee(entry_price,exit_price)
         total_fee = fee.run()
         fee_for_calc =fee.all_calc()
+        net_profit = exit_price -(fee_for_calc +entry_price)
+        try_to_save("long",self.current,target,self.stoploss,quantity,net_profit,self.reason)
+       
+
        
     
+       
         return (f"\nquantity ={quantity}\ntarget = {target_price}\nentry price"
         f"{entry_price}\nif right ={exit_price}and{100*target_percentage -100}"
         f"\nif wrong{stoploss_hit_price}and{100 - 100*stoploss_hit_percentage} "

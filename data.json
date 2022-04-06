@@ -1,0 +1,11 @@
+{
+       "1": {
+              "short_long": "long",
+              "entry": 200.0,
+              "target": 100.0,
+              "stoploss": 150.0,
+              "quantity": 0.2,
+              "net_profit": 19.968000000000004,
+              "reason": "double buttom"
+       }
+}
