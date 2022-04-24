@@ -36,4 +36,4 @@ jobs:
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:
         user: trading_target
-        password: ${{ pypi-AgEIcHlwaS5vcmcCJGE3OWUyNGU0LTZlZGYtNGM4Ni04OGQ4LTAyYThkYTZlNTAwMwACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgbni6zXCtG_iinCJn7pMaxEgn4QZrWZkg7rDjNHwnzUE }}
+        password: ${{ pypi-AgEIcHlwaS5vcmcCJGUxMGEwYzU2LTI4MjMtNDc3MS05MzA4LTE1NTc1MTJkZjNjMAACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgdGIvWonfLer38s6E-rTQq5juDTkzyQolEcAU4MIM5_o }}
