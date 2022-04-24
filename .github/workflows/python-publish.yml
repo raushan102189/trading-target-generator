@@ -35,5 +35,5 @@ jobs:
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:
-        user: trading_target
-        password: ${{ pypi-AgEIcHlwaS5vcmcCJGUxMGEwYzU2LTI4MjMtNDc3MS05MzA4LTE1NTc1MTJkZjNjMAACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgdGIvWonfLer38s6E-rTQq5juDTkzyQolEcAU4MIM5_o }}
+        user: last_trial
+        password: ${{ pypi-AgEIcHlwaS5vcmcCJDJjNjVkZDA0LTlmMWQtNDRkYy1iNDgxLWVlODBjZjUxYjRmYQACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgrw6YUu3bzh9kf1IK2wPEG7JPJGn7OM0pFzez1H3qPJ0 }}
